@@ -1,0 +1,22 @@
+{
+  "name": "snap-test-admin",
+  "version": "1.0.0",
+  "description": "This is the admin side for snap test app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peiranli/SnapDecisionAdmin.git"
+  },
+  "author": "Peiran Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peiranli/SnapDecisionAdmin/issues"
+  },
+  "homepage": "https://github.com/peiranli/SnapDecisionAdmin#readme",
+  "dependencies": {
+    "firebase-admin": "^4.1.3"
+  }
+}
