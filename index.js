@@ -9,13 +9,6 @@ admin.initializeApp({
 var fs = require("fs");
 var console = require("console");
 
-var mode = process.argv[2];
-var d= false;
-if(mode == "-delete"){
-  d = true;
-}else {
-  d = false;
-}
 
 function getDateTime() {
     var date = new Date();
@@ -45,11 +38,6 @@ var userInfoPath = "./users"
 if(!fs.existsSync(userInfoPath)){
   fs.mkdirSync(userInfoPath);
 }
-
-//get the root reference
-var dataRef = db.ref();
-
-
 
 //get the data reference
 var dataQuery = db.ref("data/").orderByKey();
@@ -88,10 +76,9 @@ dataQuery.once("value")
           console.log("File closed successfully!");
         });
       });
-
-
     });
   });
+
 
 //get the userinfo reference
 var userQuery = db.ref("users/").orderByKey();
@@ -133,8 +120,3 @@ userQuery.once("value")
 
     });
   });
-
-
-  if(d == true){
-    dataRef.delete();
-  }

@@ -2,5 +2,6 @@
 echo.
 
 cd R:\behavior\Android
-start node index.js -delete
+start node index.js
+start node remove.js
 pause
