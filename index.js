@@ -56,26 +56,12 @@ dataQuery.once("value")
         fs.mkdirSync(filepath);
       }
 
-      fs.open(filepath + filename,'w+',{ encoding: 'utf8'},function(err,fd){
-        if(err){
-          return console.error(err);
-        }
-        console.log("File opened successfully!");
+      //fs.openSync(filepath + filename,'w+',{ encoding: 'utf8'});
 
-        fs.writeFile(filepath + filename,jsonData,{ encoding: 'utf8'}, function(err){
-          if(err){
-            return console.error(err);
-          }
-          console.log("Data written successfully!");
-        });
+      fs.writeFileSync(filepath + filename,jsonData,{ encoding: 'utf8'});
 
-        fs.close(fd, function(err){
-          if(err){
-            console.log(err);
-          }
-          console.log("File closed successfully!");
-        });
-      });
+      //fs.closeSync(fd);
+
     });
   });
 
@@ -97,26 +83,11 @@ userQuery.once("value")
       if(!fs.existsSync(filepath)){
         fs.mkdirSync(filepath);
       }
-      fs.open(filepath + filename,'w+',{ encoding: 'utf8'},function(err,fd){
-        if(err){
-          return console.error(err);
-        }
-        console.log("File opened successfully!");
+      //fs.openSync(filepath + filename,'w+',{ encoding: 'utf8'});
 
-        fs.writeFile(filepath + filename,jsonData,{ encoding: 'utf8'}, function(err){
-          if(err){
-            return console.error(err);
-          }
-          console.log("Data written successfully!");
-        });
+      fs.writeFileSync(filepath + filename,jsonData,{ encoding: 'utf8'});
 
-        fs.close(fd, function(err){
-          if(err){
-            console.log(err);
-          }
-          console.log("File closed successfully!");
-        });
-      });
+      //fs.closeSync(fd);
 
     });
   });
