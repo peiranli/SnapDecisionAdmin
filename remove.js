@@ -3,7 +3,7 @@ var serviceAccount = require("path/to/serviceAccountKey.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://gitdots.firebaseio.com"
+  databaseURL: "https://snap-test-25140.firebaseio.com/"
 });
 
 var db = admin.database();
